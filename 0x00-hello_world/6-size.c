@@ -13,6 +13,7 @@ int main(void)
 {
 	long int longint; /* must not contain spaces for printf */
 	long long int longlongint;
+	
 	printf("Size of a char: %zu byte(s)/n", sizeof(char));
 	printf("Size of an int: %zu byte(s)/n", sizeof(int));
 	printf("Size of a long int: %zu byte(s)/n", sizeof(long int));
