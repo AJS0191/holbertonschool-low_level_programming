@@ -12,15 +12,15 @@
 int main(void)
 
 {
-	unsigned int a = 0;
+	unsigned int a = '0';
 	char x = 'a';
 
-	while (a < 9)
+	while (a <= '9')
 	{
 		putchar(a);
 		a++;
 	}
-	while (x < 'f')
+	while (x <= 'f')
 	{
 		putchar(x);
 		x++;
