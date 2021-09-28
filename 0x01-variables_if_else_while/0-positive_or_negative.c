@@ -8,7 +8,7 @@
  * Contains program that gives random numbers and checks if they are positive,
  *  negative, or zero
  *
- * Return - function should return zero upon success
+ * Return: function should return zero upon success
  */
 int main(void)
 {
@@ -18,15 +18,15 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
-		printf("%d is positive", n);
+		printf("%d is positive\n", n);
 	}
 	else if (n < 0)
 	{
-		printf("%d is negative", n);
+		printf("%d is negative\n", n);
 	}
 	else
 	{
-		printf("%d is 0", n);
+		printf("%d is 0\n", n);
 	}
 	return (0);
 }
