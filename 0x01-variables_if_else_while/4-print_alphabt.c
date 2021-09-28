@@ -22,6 +22,7 @@ int main(void)
 			continue;
 		else
 		putchar(alpha);
+		continue;
 	}
 	alpha++;
 	putchar('\n');
