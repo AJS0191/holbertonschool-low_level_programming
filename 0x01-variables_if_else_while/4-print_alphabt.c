@@ -17,13 +17,13 @@ int main(void)
 	while (alpha <= 'z')
 	{
 		if (alpha == 'q')
-			alpha++;
+			continue;
 		else if (alpha == 'e')
-			alpha++;
+			continue;
 		else
 		putchar(alpha);
-		alpha++;
 	}
+	alpha++;
 	putchar('\n');
 	return (0);
 }
