@@ -17,12 +17,20 @@ int main(void)
 	while (alpha <= 'z')
 	{
 		if (alpha == 'q')
-			continue;
-		else if (alpha == 'e')
-			continue;
-		else
+		{
+			alpha++;
 		putchar(alpha);
-		continue;
+		}
+		else if (alpha == 'e')
+		{
+			alpha++;
+		putchar(alpha);
+		}
+		else
+		{
+		putchar(alpha);
+		alpha++;
+		}
 	}
 	alpha++;
 	putchar('\n');
