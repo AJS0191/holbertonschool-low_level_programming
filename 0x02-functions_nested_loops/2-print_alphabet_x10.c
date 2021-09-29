@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_alphabet - entry point to program
+ * print_alphabet_x10 - function definition
  * VOID
  *
  * Description: prints the alphabet in lower case
