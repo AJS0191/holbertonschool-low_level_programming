@@ -16,10 +16,18 @@ int main(void)
 
 	while (a <= '9')
 	{
-		putchar(a);
-		putchar(',');
-		putchar(' ');
-		a++;
+		if (a == 9)
+		{
+			putchar(a);
+			a++;
+		}
+		else
+		{
+			putchar(a);
+			putchar(',');
+			putchar(' ');
+			a++;
+		}
 	}
 	return (0);
 }
