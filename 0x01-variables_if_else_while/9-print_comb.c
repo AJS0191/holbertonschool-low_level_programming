@@ -16,7 +16,7 @@ int main(void)
 
 	while (a <= '9')
 	{
-		if (a == 9)
+		if (a == '9')
 		{
 			putchar(a);
 			a++;
