@@ -3,7 +3,7 @@
  * main - entry point to program
  * VOID
  *
- * Description: Print the single digits of base 16
+ * Description: 0 though 9 with commas
  *
  *
  * Return: 0
@@ -18,13 +18,9 @@ int main(void)
 	while (a <= '9')
 	{
 		putchar(a);
+		putchar(',');
+		putchar(' ');
 		a++;
 	}
-	while (x <= 'f')
-	{
-		putchar(x);
-		x++;
-	}
-	putchar('\n');
 	return (0);
 }
