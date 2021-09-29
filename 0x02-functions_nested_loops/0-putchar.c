@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	char name[8] = "_putchar\n";
+	char name[10] = "_putchar\n";
 
 	_putchar(name);
 	return (0);
