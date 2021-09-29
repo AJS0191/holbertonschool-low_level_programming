@@ -12,10 +12,8 @@
 
 int main(void)
 {
-	char name[8] = "_putchar";
-	char nl = "\n";
+	char name[8] = "_putchar\n";
 
 	_putchar(name);
-	_putchar(nl);
 	return (0);
 }
