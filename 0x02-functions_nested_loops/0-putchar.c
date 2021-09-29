@@ -13,9 +13,9 @@
 int main(void)
 {
 	char name[8] = "_putchar";
-
+	char nl = "\n";
 
 	_putchar(name);
-	_putchar('\n');
+	_putchar(nl);
 	return (0);
 }
