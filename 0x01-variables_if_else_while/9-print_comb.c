@@ -13,7 +13,6 @@ int main(void)
 
 {
 	unsigned int a = '0';
-	unsigned int x = 'a';
 
 	while (a <= '9')
 	{
