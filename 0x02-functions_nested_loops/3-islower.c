@@ -8,14 +8,18 @@
  *
  * Return: 1 if lowercase and 0 if uppercase
  */
+int _islower(int c);
 
-int _islower(int x);
+int _islower(int c)
 {
-	x = x + '0';
 
-	if (x < 97)
+	if (c < 97)
+	{
 		return (0);
-	if (x >= 97)
+	}
+	if (c >= 97)
+	{
 		return (1);
-	return(1);
+	}
+	return (1);
 }
