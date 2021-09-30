@@ -12,5 +12,6 @@ int _abs(int);
 int print_last_digit(int);
 int add(int, int);
 void jack_bauer(void);
+void times_table(void);
 
 #endif /* _MAIN_H_ */
