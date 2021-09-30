@@ -14,5 +14,5 @@ int print_last_digit(int n)
 {
 	n = n % 10;
 	n = n + 'a' - 97;
-	return (putchar(n));
+	return (_putchar(n));
 }
