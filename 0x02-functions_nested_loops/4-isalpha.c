@@ -12,7 +12,7 @@ int _isalpha(int c);
 
 int _isalpha(int c)
 {
-	c = c + '0'
+	c = c + '0';
 
 	if (c < 59)
 	{
