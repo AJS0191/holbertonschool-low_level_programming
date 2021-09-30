@@ -14,13 +14,23 @@ int _isalpha(int c)
 {
 	c = c + '0';
 
-	if (c < 59 && c > 32)
+	if (c < 59)
 	{
-		return (1);
+		if (c > 32)
+		{
+			return (1);
+		}
+		else
+			return (0);
 	}
-	else if (c < 123 && c > 96)
+	else if (c < 123)
 	{
-		return (1);
+		if (c > 96)
+		{
+			return (1);
+		}
+		else
+			return (0);
 	}
 	else
 		return (0);
