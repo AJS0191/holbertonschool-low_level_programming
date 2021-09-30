@@ -13,6 +13,6 @@ int print_last_digit(int);
 int print_last_digit(int n)
 {
 	n = n % 10;
-	n = n * 11;
-	return (n);
+	n = n + 'a' - 97;
+	return (putchar(n));
 }
