@@ -28,8 +28,10 @@ void jack_bauer(void)
 		_putchar(':');
 		_putchar(mfd + '0');
 		_putchar(msd + '0');
+		_putchar('\n');
 		min++;
-		hr++;
 		}
+		hr++;
+		min = 0;
 	}
 }
