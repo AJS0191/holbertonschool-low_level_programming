@@ -14,9 +14,9 @@ int _isalpha(int c)
 {
 	c = c - 'a' + 97;
 
-	if (c < 66)
+	if (c < 91)
 	{
-		if (c > 91)
+		if (c > 64)
 		{
 			return (1);
 		}
