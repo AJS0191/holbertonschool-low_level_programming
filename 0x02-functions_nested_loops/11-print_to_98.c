@@ -50,6 +50,7 @@ void print_to_98(int n)
 		else if (n < 0)
 		{
 			a = n * -1;
+
 			_putchar('-');
 			if (n > -10)
 			{
@@ -108,8 +109,6 @@ void print_to_98(int n)
 				_putchar('-');
 				if (n > -10)
 				{
-					_putchar(',');
-					_putchar(' ');
 					_putchar(a + '0');
 				}
 				else if (n < -99)
@@ -119,8 +118,6 @@ void print_to_98(int n)
 					mn = mcn % 10;
 					ln = a % 10;
 
-					_putchar(',');
-					_putchar(' ');
 					_putchar(fn + '0');
 					_putchar(mn + '0');
 					_putchar(ln + '0');
@@ -129,9 +126,7 @@ void print_to_98(int n)
 				{
 					fn = a / 10;
 					ln = a % 10;
-					
-					_putchar(',');
-					_putchar(' ');
+
 					_putchar(fn + '0');
 					_putchar(ln + '0');
 				}
@@ -173,4 +168,5 @@ void print_to_98(int n)
 		}
 		n--;
 	}
+	_putchar('\n');
 }
