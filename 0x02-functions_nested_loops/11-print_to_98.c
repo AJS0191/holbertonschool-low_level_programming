@@ -90,7 +90,7 @@ void print_to_98(int n)
 			{
 				fn = n / 10;
 				ln = n % 10;
-				
+
 				_putchar(',');
 				_putchar(' ');
 				_putchar(fn + '0');
@@ -151,7 +151,7 @@ void print_to_98(int n)
 				mcn = n / 10;
 				mn = mcn % 10;
 				ln = n % 10;
-				
+
 				_putchar(',');
 				_putchar(' ');
 				_putchar(fn + '0');
@@ -162,8 +162,7 @@ void print_to_98(int n)
 			{
 				fn = n / 10;
 				ln = n % 10;
-				
-				
+
 				_putchar(',');
 				_putchar(' ');
 				_putchar(fn + '0');
