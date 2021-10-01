@@ -142,31 +142,35 @@ void print_to_98(int n)
 	}
 	if (n > 98)
 	{
-		if (n > 99)
+		while (n > 98)
 		{
-			fn = n / 100;
-			mcn = n / 10;
-			mn = mcn % 10;
-			ln = n % 10;
-
-			_putchar(',');
-			_putchar(' ');
-			_putchar(fn + '0');
-			_putchar(mn + '0');
-			_putchar(ln + '0');
+			n--:
+			if (n > 99)
+			{
+				fn = n / 100;
+				mcn = n / 10;
+				mn = mcn % 10;
+				ln = n % 10;
+				
+				_putchar(',');
+				_putchar(' ');
+				_putchar(fn + '0');
+				_putchar(mn + '0');
+				_putchar(ln + '0');
+			}
+			else
+			{
+				fn = n / 10;
+				ln = n % 10;
+				
+				
+				_putchar(',');
+				_putchar(' ');
+				_putchar(fn + '0');
+				_putchar(ln + '0');
+			}
+			n--;
 		}
-		else
-		{
-			fn = n / 10;
-			ln = n % 10;
-
-
-			_putchar(',');
-			_putchar(' ');
-			_putchar(fn + '0');
-			_putchar(ln + '0');
-		}
-		n--;
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
