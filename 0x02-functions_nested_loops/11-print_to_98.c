@@ -136,7 +136,7 @@ void print_to_98(int n)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(n);
+				_putchar(n + '0');
 			}
 		}
 	}
