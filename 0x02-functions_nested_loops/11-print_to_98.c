@@ -85,7 +85,7 @@ void print_to_98(int n)
 	{
 		while (n <= 98)
 		{
-			n--;
+			n++;
 			if (n > 9)
 			{
 				fn = n / 10;
