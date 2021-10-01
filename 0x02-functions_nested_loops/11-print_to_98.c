@@ -169,8 +169,7 @@ void print_to_98(int n)
 				_putchar(fn + '0');
 				_putchar(ln + '0');
 			}
-			n--;
 		}
-		_putchar('\n');
 	}
+	_putchar('\n');
 }
