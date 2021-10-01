@@ -50,7 +50,7 @@ void print_to_98(int n)
 		else if (n < 0)
 		{
 			a = n * -1;
-			putchar('-');
+			_putchar('-');
 			if (n > -10)
 			{
 				_putchar(a + '0');
