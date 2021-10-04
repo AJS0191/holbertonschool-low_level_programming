@@ -22,6 +22,8 @@ void print_line(int n)
 	}
 	else if (n > 0)
 	{
+		a = 0;
+		
 		while (a < n)
 		{
 			_putchar('_');
