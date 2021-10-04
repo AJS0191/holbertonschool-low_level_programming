@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * more_numbers - prints 1 - 14 ten times.
  *
@@ -10,7 +9,6 @@
  **/
 
 void more_numbers(void);
-void doubled(int c);
 
 void more_numbers(void)
 
