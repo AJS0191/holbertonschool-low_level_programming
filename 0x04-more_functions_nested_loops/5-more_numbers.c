@@ -10,14 +10,13 @@
  **/
 
 void more_numbers(void);
+void doubled(int c);
 
 void more_numbers(void)
 
 {
 	int i;
 	int j;
-	int k;
-	int l;
 
 	while (j < 10)
 	{
@@ -31,11 +30,7 @@ void more_numbers(void)
 			}
 			else
 			{
-				k = i / 10;
-				l = i % 10;
-
-				_putchar(k + '0');
-				_putchar(l + '0');
+				doubled(i);
 				i++;
 			}
 		}
