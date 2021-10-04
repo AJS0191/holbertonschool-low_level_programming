@@ -14,11 +14,7 @@ int _isupper(int c);
 int _isupper(int c)
 
 {
-	int a;
-
-	a = c + 0;
-
-	if ((a <= 65) && (a >= 90))
+	if ((c >= 65) && (c <= 90))
 	{
 		return (1);
 	}
