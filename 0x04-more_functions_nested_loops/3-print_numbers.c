@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 
 /**
  * print_number - Takes an integer and returns whether it is 0 - 9.
