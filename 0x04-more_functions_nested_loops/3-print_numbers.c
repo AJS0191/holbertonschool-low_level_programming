@@ -2,7 +2,7 @@
 
 
 /**
- * print_number - Takes an integer and returns whether it is 0 - 9.
+ * print_numbers - Takes an integer and returns whether it is 0 - 9.
  *
  *
  *
