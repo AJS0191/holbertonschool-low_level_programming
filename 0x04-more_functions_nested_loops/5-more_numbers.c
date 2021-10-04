@@ -31,7 +31,7 @@ void more_numbers(void)
 			}
 			else
 			{
-				k = i \ 10;
+				k = i / 10;
 				l = i % 10;
 
 				_putchar(k + '0');
