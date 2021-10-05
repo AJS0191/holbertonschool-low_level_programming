@@ -21,7 +21,7 @@ void print_square(int size)
 
 	if (size <= 0)
 	{
-		putchar('\n');
+		_putchar('\n');
 	}
 	else
 	{
@@ -31,10 +31,10 @@ void print_square(int size)
 
 			while (hash < size)
 			{
-				putchar('#');
+				_putchar('#');
 				hash++;
 			}
-			putchar('\n');
+			_putchar('\n');
 			lines++;
 			hash = 0;
 		}
