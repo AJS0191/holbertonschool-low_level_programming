@@ -1,6 +1,4 @@
 #include "main.h"
-
-
 /**
  * print_diagonal - prints \ n times
  * @n: number of \
@@ -14,8 +12,8 @@ void print_diagonal(int n);
 void print_diagonal(int n)
 
 {
-	int a;
-	int b;
+	int spaces;
+	int lines;
 
 	if (n <= 0)
 	{
