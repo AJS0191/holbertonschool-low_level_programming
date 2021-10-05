@@ -9,9 +9,9 @@
  * Return: VOID
  **/
 
-void print_square(int n);
+void print_square(int size);
 
-void print_square(int n)
+void print_square(int size)
 
 {
 	int lines;
