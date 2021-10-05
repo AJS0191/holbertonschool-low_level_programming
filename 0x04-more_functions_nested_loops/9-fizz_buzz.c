@@ -37,7 +37,8 @@ int main(void)
 		{
 			printf("%d", soda);
 		}
-		putchar(' ');
+		if (soda != 100)
+			putchar(' ');
 	}
 	return (0);
 }
