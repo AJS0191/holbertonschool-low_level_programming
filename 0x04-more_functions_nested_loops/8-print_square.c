@@ -17,17 +17,17 @@ void print_square(int size)
 	int lines;
 	int hash;
 
-	if (n <= 0)
+	if (size <= 0)
 	{
 		_putchar('\n');
 	}
 	else
 	{
-		while (lines < n)
+		while (lines < size)
 		{
 			hash = 0;
 
-			while (hash < n)
+			while (hash < size)
 			{
 				_putchar('#');
 				hash++;
