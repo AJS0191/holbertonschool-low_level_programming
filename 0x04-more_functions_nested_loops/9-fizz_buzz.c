@@ -15,7 +15,7 @@ int main(void)
 	int x5;
 
 	soda = 0;
-	while (soda < 101)
+	while (soda < 100)
 	{
 		soda++;
 		x3 = soda % 3;
