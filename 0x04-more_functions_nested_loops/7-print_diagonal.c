@@ -22,7 +22,7 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		a = 0;
+		a = 1;
 
 		while (a < n)
 		{
