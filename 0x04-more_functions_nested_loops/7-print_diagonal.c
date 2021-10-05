@@ -22,14 +22,20 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		a = 1;
+		a = 0;
+		b = 0;
 
-		while (a < n)
-		{
-			_putchar(' ');
-			a++;
-		}
 		_putchar('\\');
 		_putchar('\n');
+		a++;
+		while (a < n)
+			while (b < a)
+			{
+				_putchar(' ');
+				b++;
+			}
+		_putchar('\\');
+		_putchar('\n');
+		a++;
 	}
 }
