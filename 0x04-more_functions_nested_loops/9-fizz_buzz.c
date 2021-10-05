@@ -40,5 +40,6 @@ int main(void)
 		if (soda != 100)
 			putchar(' ');
 	}
+	putchar(' ');
 	return (0);
 }
