@@ -16,7 +16,7 @@ void print_square(int size)
 {
 	int lines;
 	int hash;
-	size = 4;
+
 	lines = 0;
 
 	if (size <= 0)
