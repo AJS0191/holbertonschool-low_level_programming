@@ -2,16 +2,16 @@
 
 
 /**
- * print_line - prints _ n times
- * @n: number of _
+ * print_diagonal - prints \ n times
+ * @n: number of \
  *
  *
  * Return: VOID
  **/
 
-void print_line(int n);
+void print_diagonal(int n);
 
-void print_line(int n)
+void print_diagonal(int n)
 
 {
 	int a;
