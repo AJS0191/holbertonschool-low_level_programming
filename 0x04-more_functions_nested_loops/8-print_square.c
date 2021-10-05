@@ -2,19 +2,18 @@
 
 
 /**
- * print_line - prints _ n times
- * @n: number of _
+ * print_square - prints # square n times
+ * @n: number of square
  *
  *
  * Return: VOID
  **/
 
-void print_line(int n);
+void print_square(int n);
 
-void print_line(int n)
+void print_square(int n)
 
 {
-	int a;
 	int lines;
 	int hash;
 
