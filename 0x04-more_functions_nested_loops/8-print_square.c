@@ -3,7 +3,7 @@
 
 /**
  * print_square - prints # square n times
- * @n: number of square
+ * @size: number of square
  *
  *
  * Return: VOID
