@@ -23,22 +23,28 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		a = 1;
-		b = 0;
+		lines = 0;
+		spaces = 0;
 
-		while (a <= n)
+		while (lines < n)
 		{
-			_putchar('\\');
-			_putchar('\n');
-			while (b < a)
+			if (lines == 0)
 			{
-				_putchar(' ');
-				b++;
+				_putchar('\\');
+				_putchar('\n');
 			}
-			a++;
-			b = 0;
+			else
+			{
+				while (spaces < lines)
+				{
+					_putchar(' ');
+					spaces++;
+				}
+				_putchar('\\');
+				_putchar('\n');
+				spaces = 0;
+				lines++;
+			}
 		}
-		_putchar('\\');
-		_putchar('\n');
 	}
 }
