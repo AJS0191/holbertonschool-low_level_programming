@@ -17,7 +17,12 @@ void puts2(char *str)
 
 	while (counter <= a)
 	{
-		if (a == 0)
+		if (str[a] == '\0')
+		{
+			_putchar('\n');
+			counter = a + 1;
+		}
+		else if (a == 0)
 		{
 			_putchar(str[a]);
 			a++;
@@ -31,11 +36,6 @@ void puts2(char *str)
 		{
 			a++;
 			continue;
-		}
-		else if (str[a] == '\0')
-		{
-			_putchar('\n');
-			counter = a + 1;
 		}
 	}
 }
