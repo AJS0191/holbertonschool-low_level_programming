@@ -27,6 +27,8 @@ void puts2(char *str)
 			_putchar(str[a]);
 			a++;
 		}
+		else if (a % 2 != 0)
+			continue;
 		else if (str[a] == '\0')
 		{
 			_putchar('\n');
