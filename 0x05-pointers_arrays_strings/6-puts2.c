@@ -28,7 +28,10 @@ void puts2(char *str)
 			a++;
 		}
 		else if (a % 2 != 0)
+		{
+			a++;
 			continue;
+		}
 		else if (str[a] == '\0')
 		{
 			_putchar('\n');
