@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _puts2 - prints every other character of a string
+ * puts2 - prints every other character of a string
  *
  * @str: the string to be printed
  *
@@ -8,9 +8,9 @@
  **/
 
 
-void _puts2(char *str);
+void puts2(char *str);
 
-void _puts2(char *str)
+void puts2(char *str)
 {
 	int a = 0;  /*will be the character of the string*/
 	int counter = 0; /*stops the printing at the end of the string*/
