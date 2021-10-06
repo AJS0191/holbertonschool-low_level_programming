@@ -18,7 +18,9 @@ void _puts2(char *str)
 	while (counter <= a)
 	{
 		if (a == 0)
+		{
 			_putchar(str[a]);
+		}
 		else if (str[a] != '\0') && (a % 2 == 0)
 		{
 			_putchar(str[a]);
