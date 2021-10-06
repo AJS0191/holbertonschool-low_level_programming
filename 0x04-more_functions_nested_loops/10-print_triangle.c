@@ -27,7 +27,7 @@ void print_triangle(int size)
 		hashes = 0;
 		while (lines < size)
 		{
-			while (spaces < size)
+			while (spaces < size - 1)
 			{
 				_putchar(' ');
 				spaces++;
