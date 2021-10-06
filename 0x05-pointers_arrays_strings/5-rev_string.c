@@ -42,7 +42,11 @@ void rev_string(char *s)
 		{
 			rts[c] = '\0';
 			counter = b - 1;
-			*s = rts;
+			while (c >= 0)
+			{
+				s[c] = rts[c];
+				c--;
+			}
 		}
 	}
 }
