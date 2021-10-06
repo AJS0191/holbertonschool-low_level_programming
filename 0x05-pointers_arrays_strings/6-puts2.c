@@ -21,7 +21,7 @@ void _puts2(char *str)
 		{
 			_putchar(str[a]);
 		}
-		else if (str[a] != '\0') && (a % 2 == 0)
+		else if ((str[a] != '\0') && (a % 2 == 0))
 		{
 			_putchar(str[a]);
 			a++;
