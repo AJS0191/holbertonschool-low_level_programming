@@ -25,4 +25,5 @@ int _strlen(char *s)
 		}
 		counter++;
 	}
+	return (a);
 }
