@@ -13,19 +13,20 @@ char *_strcpy(char *dest, char *src)
 	int a = 0;
 	int counter = 0;
 	int b;
-	char rts[500] = "";
+	char rts[50] = "";
 
 	while (counter <= a)
 	{
 		if (src[a] != '\0')
 		{
 			rts[a] = src[a];
+			a++;
 		}
 		else if (src[a] == '\0')
 		{
 			rts[a] = src[a];
 			b = a;
-			counter = a++;
+			counter = a + 1;
 		}
 	}
 	a = 0;
