@@ -16,9 +16,9 @@ void puts_half(char *str)
 	int a = 0;  /*will be the character of the string*/
 	int counter = 0; /*stops the printing at the end of the string*/
 
-	a = _strlen(str);
-	counter = a;
-	while (counter <= a)
+	counter = _strlen(str);
+	a = counter / 2;
+	while (a <= counter)
 	{
 		if (str[a] != '\0')
 		{
@@ -28,7 +28,7 @@ void puts_half(char *str)
 		else
 		{
 			_putchar('\n');
-			counter = a + 1;
+			a = counter + 1;
 		}
 	}
 }
