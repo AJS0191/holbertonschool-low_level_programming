@@ -8,7 +8,7 @@
  * Return: char *
  **/
 
-void _strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int a = 0;
 	int counter = 0;
