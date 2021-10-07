@@ -13,7 +13,7 @@ char *_strcpy(char *dest, char *src)
 	int a = 0;
 	int counter = 0;
 	int b;
-	char rts[50] = "";
+	char rts[500] = "";
 
 	while (counter <= a)
 	{
