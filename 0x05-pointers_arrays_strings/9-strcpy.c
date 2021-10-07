@@ -21,7 +21,7 @@ char *_strcpy(char *dest, char *src)
 		{
 			rts[a] = src[a];
 		}
-		else if (s[a] == '\0')
+		else if (src[a] == '\0')
 		{
 			rts[a] = src[a];
 			b = a;
