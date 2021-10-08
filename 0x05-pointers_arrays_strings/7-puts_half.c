@@ -18,6 +18,8 @@ void puts_half(char *str)
 
 	counter = _strlen(str);
 	a = counter / 2;
+	if (a % 2 != 0)
+		a--;
 	while (a <= counter)
 	{
 		if (str[a] != '\0')
