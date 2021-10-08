@@ -18,7 +18,7 @@ void puts_half(char *str)
 
 	counter = _strlen(str);
 	a = counter / 2;
-	if (a % 2 == 0)
+	if ((a % 2 == 0) && (a != 1))
 		a++;
 	while (a <= counter)
 	{
