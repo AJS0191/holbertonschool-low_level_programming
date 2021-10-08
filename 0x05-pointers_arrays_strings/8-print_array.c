@@ -14,17 +14,20 @@ void print_array(int *a, int n)
 {
 	int counter = 0;
 
-	while (counter <= n)
+
+	while (counter <= n - 1)
 	{
-		if (counter != n)
+		if (counter != n - 1)
 		{
-			printf("%d,", a[n]);
-			n++;
+			printf("%d, ", *a);
+			a++;
+			counter++;
 		}
 		else
 		{
-			printf("%d\n", a[n]);
-			n++;
+			printf("%d\n", *a);
+			a++;
+			counter++;
 		}
 	}
 }
