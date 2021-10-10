@@ -29,6 +29,7 @@ char *_strncpy(char *dest, char *src, int n)
 		while (b < c)
 		{
 			dest[a] = '\0';
+			a++;
 			b++;
 		}
 	}
