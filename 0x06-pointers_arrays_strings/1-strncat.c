@@ -1,4 +1,5 @@
 #include "main.h"
+#include "2-strlen.c"
 /**
  * _strncat - takes n bytes of src and adds it too dest
  *
