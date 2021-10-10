@@ -18,7 +18,7 @@ char *_strncpy(char *dest, char *src, int n)
 	int b = 0;
 	int c = _strlen(src);
 
-	if (c < n)
+	if ((c < n) || (c == 0))
 	{
 		while (b < c)
 		{
@@ -26,18 +26,22 @@ char *_strncpy(char *dest, char *src, int n)
 			a++;
 			b++;
 		}
-		while (b < c)
+		while (b < n)
 		{
 			dest[a] = '\0';
 			a++;
 			b++;
 		}
+		return(dest);
 	}
-	while (b < n)
+	else
 	{
-		dest[a] = src[b];
-		a++;
-		b++;
+		while (b < n)
+		{
+			dest[a] = src[b];
+			a++;
+			b++;
+		}
+		return (dest);
 	}
-	return (dest);
 }
