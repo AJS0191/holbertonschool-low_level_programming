@@ -18,7 +18,7 @@ char *string_toupper(char *s)
 
 	while (b < a)
 	{
-		if ((s[b] + 0 > 97) && (s[b] + 0 < 123))
+		if ((s[b] + 0 > 96) && (s[b] + 0 < 123))
 		{
 
 			c = s[b] - '0';
