@@ -1,6 +1,5 @@
 #include "main.h"
 #include "2-strlen.c"
-#include <stddef.h>
 /**
  * _strchr - searches for char matching c
  *
@@ -18,7 +17,7 @@ char *_strchr(char *s, char c)
 	char **find;
 	int b = _strlen(s);
 	char *d;
-	
+
 	while (a < b)
 	{
 		if (s[a] == c)
@@ -29,7 +28,7 @@ char *_strchr(char *s, char c)
 		}
 		a++;
 	}
-	d = NULL;
+	d = '\0';
 	find = &d;
 	return (*find);
 }
