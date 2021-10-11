@@ -19,15 +19,15 @@ char *_strncpy(char *dest, char *src, int n)
 	int c = _strlen(src);
 	int d = _strlen(dest);
 
-	if ((c < n) || (c == 0))
+	if (c < n)
 	{
-		while (b < c)
+		while (b <= c)
 		{
 			dest[a] = src[b];
 			a++;
 			b++;
 		}
-		while (b < d)
+		while (b < n)
 		{
 			dest[a] = '\0';
 			a++;
