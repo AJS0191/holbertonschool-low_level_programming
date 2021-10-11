@@ -14,13 +14,16 @@ char *string_toupper(char *s)
 {
 	int  a = _strlen(s);
 	int b = 0;
+	int c = 0;
 
 	while (b < a)
 	{
 		if ((s[b] + 0 > 97) && (s[b] + 0 < 123))
 		{
 
-			s[b] = s[b] - "32";
+			c = s[b] - '0';
+			c - 32;
+			s[b] = c + '0';
 			b++;
 		}
 		else
