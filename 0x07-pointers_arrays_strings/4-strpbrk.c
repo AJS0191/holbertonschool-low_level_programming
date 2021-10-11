@@ -38,7 +38,6 @@ char *_strpbrk(char *s, char *accept)
 					find = &e;
 					return (*find);
 				}
-				a++;
 				b++;
 			}
 		}
