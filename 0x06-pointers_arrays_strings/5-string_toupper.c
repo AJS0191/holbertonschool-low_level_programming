@@ -1,4 +1,5 @@
 #include "main.h"
+#include "2-strlen.c"
 /**
  * string_toupper - changes lowercase characters in string to uppercase
  *
@@ -11,7 +12,7 @@ char *string_toupper(char *s);
 
 char *string_toupper(char *s)
 {
-	int  a = strlen(s);
+	int  a = _strlen(s);
 	int b = 0;
 
 	while (b < a)
@@ -19,7 +20,7 @@ char *string_toupper(char *s)
 		if ((s[b] + 0 > 97) && (s[b] + 0 < 123))
 		{
 
-			s[b] = s[b] - '32';
+			s[b] = s[b] - "32";
 			b++;
 		}
 		else
