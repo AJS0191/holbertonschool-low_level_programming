@@ -12,8 +12,8 @@ int _strcmp(char *s1, char *s2);
 
 int _strcmp(char *s1, char *s2)
 {
-	int a = _strlen(s1);
-	int b = _strlen(s2);
+	int a = strlen(s1);
+	int b = strlen(s2);
 	int c = 0;
 	int d;
 	int e;
@@ -26,9 +26,9 @@ int _strcmp(char *s1, char *s2)
 	while (c < d)
 	{
 		e = s1[c] - s2[c];
-		if (b ==0)
+		if (e == 0)
 		{
-			a++;
+			c++;
 			continue;
 		}
 		else
