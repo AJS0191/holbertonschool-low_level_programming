@@ -22,7 +22,7 @@ char *string_toupper(char *s)
 		{
 
 			c = s[b] - '0';
-			c - 32;
+			c = c - 32;
 			s[b] = c + '0';
 			b++;
 		}
