@@ -12,8 +12,8 @@ int _strcmp(char *s1, char *s2);
 
 int _strcmp(char *s1, char *s2)
 {
-	int a = strlen(s1);
-	int b = strlen(s2);
+	int a = _strlen(s1);
+	int b = _strlen(s2);
 	int c = 0;
 	int d;
 	int e;
