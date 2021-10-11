@@ -6,7 +6,7 @@
  * @s1: first string being compared
  * @s2: second string being compared
  *
- * Return - returns 0 if the same - if str1 larger + vice versa
+ * Return: returns 0 if the same - if str1 larger + vice versa
  **/
 int _strcmp(char *s1, char *s2);
 
