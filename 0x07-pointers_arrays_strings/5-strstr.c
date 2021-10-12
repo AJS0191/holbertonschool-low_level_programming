@@ -53,8 +53,8 @@ char *_strstr(char *haystack, char *needle)
 		find = &e;
 		return (*find);
 	}
-}
-else
-{
-	return(haystack);
+	else
+	{
+		return(haystack);
+	}
 }
