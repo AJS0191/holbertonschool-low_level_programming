@@ -40,7 +40,10 @@ char *_strstr(char *haystack, char *needle)
 					break;
 				}
 			}
+			if (b == d)
+			{
 			return (*find);
+			}
 		}
 		a++;
 
