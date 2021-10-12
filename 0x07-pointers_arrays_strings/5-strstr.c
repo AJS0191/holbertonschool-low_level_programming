@@ -19,36 +19,42 @@ char *_strstr(char *haystack, char *needle)
 	char *e;
 	char **find;
 
-	while (a < c)
+	if (d <= 1)
 	{
-		if (haystack[a] == needle[b])
+		while (a < c)
 		{
-			e = &haystack[a];
-			find = &e;
+			if (haystack[a] == needle[b])
+			{
+				e = &haystack[a];
+				find = &e;
+				a++;
+				b++;
+				while (b < d)
+				{
+					if (haystack[a] == needle[b])
+					{
+						a++;
+						b++;
+					}
+					else
+					{
+						b = 0;
+						break;
+					}
+				}
+				if (b == d)
+				{
+					return (*find);
+				}
+			}
 			a++;
-			b++;
-			while (b < d)
-			{
-				if (haystack[a] == needle[b])
-				{
-					a++;
-					b++;
-				}
-				else
-				{
-					b = 0;
-					break;
-				}
-			}
-			if (b == d)
-			{
-			return (*find);
-			}
 		}
-		a++;
-
+		e = '\0';
+		find = &e;
+		return (*find);
 	}
-	e = '\0';
-	find = &e;
-	return (*find);
+}
+else
+{
+	return(haystack);
 }
