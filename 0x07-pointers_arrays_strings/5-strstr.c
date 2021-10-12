@@ -8,7 +8,6 @@
  *
  * Return: returns the location of full match
  **/
-
 char *_strstr(char *haystack, char *needle);
 
 char *_strstr(char *haystack, char *needle)
@@ -30,18 +29,21 @@ char *_strstr(char *haystack, char *needle)
 			b++;
 			while (b < d)
 			{
-				if (haystack[a] == needle[a])
+				if (haystack[a] == needle[b])
 				{
 					a++;
 					b++;
 				}
 				else
+				{
+					b = 0;
 					break;
-				return (*find);
+				}
 			}
+			return (*find);
 		}
 		a++;
-		b++;
+
 	}
 	e = '\0';
 	find = &e;
