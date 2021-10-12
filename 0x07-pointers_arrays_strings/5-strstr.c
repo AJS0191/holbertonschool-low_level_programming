@@ -19,7 +19,7 @@ char *_strstr(char *haystack, char *needle)
 	char *e;
 	char **find;
 
-	if (d <= 1)
+	if (d >= 1)
 	{
 		while (a < c)
 		{
@@ -55,6 +55,6 @@ char *_strstr(char *haystack, char *needle)
 	}
 	else
 	{
-		return(haystack);
+		return (haystack);
 	}
 }
