@@ -14,8 +14,10 @@ void _print_rev_recursion(char *s)
 	int a = _strlen(s);
 	if (a > 0)
 	{
-		_putchar(s[a]);
-		s[a] = '\0';
+		s = s + a;
+		_putchar(s[0]);
+		s[0] = '\0';
+		s = s - a;
 		_print_rev_recursion(s);
 	}
 }
