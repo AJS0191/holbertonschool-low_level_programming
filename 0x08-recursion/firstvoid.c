@@ -14,4 +14,5 @@ char *firstvoid(char *s)
 	{
 		return (s);
 	}
+	return (s);
 }
