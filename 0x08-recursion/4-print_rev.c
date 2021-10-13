@@ -39,7 +39,6 @@ void print_rev(char *s)
 		}
 		else
 		{
-			_putchar('\n');
 			counter = b - 1;
 				}
 	}
