@@ -10,20 +10,12 @@
  **/
 
 void _print_rev_recursion(char *s)
-
 {
-	char *s2;
-
-	s2 = firstvoid(s);
-	if (_strlen(s2) < 1)
+	int a = _strlen(s);
+	if (a > 0)
 	{
-		_putchar('\n');
-	}
-	else
-	{
-		s2--;
-		_putchar(s2[0]);
-		s2[0] = '\0';
+		_putchar(s[a]);
+		s[a] = '\0';
 		_print_rev_recursion(s);
 	}
 }
