@@ -13,22 +13,12 @@ char *leet(char *s)
 	char checku[6] = {'A', 'E', 'O', 'T', 'L'};
 	char le37[6] = {'4', '3', '0', '7', '1'};
 	int y = 0;
-	int x = 0;
+	int x;
 	char *pl = checkl;
 	char *pu = checku;
 	char *p1337 = le37;
 
-	while (y < 6)
-	{
-		if (s[x] == pl[y] || s[x] == pu[y])
-		{
-			s[x] = p1337[y];
-			break;
-		}
-		y++;
-	}
-	y = 0;
-	for (x = 1; s[x] != '\0'; x++)
+   	for (x = 0; s[x] != '\0'; x++)
 	{
 		while (y < 6)
 		{
