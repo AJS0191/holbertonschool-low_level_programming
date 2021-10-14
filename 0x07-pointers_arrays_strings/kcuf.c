@@ -2,8 +2,6 @@
 
 void kcuf(int c)
 {
-	if (c < 0)
-		c = -c;
 	int f = c / 1000;
 	int g = c / 100;
 	int h = g / 10;
@@ -12,7 +10,8 @@ void kcuf(int c)
 	int u = c % 100;
 	int l = c % 10;
 
-
+	if (c < 0)
+		c = -c;
 	putchar(f + '0');
 	putchar(s + '0');
 	putchar(t + '0');
