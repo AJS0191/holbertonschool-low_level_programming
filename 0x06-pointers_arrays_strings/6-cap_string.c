@@ -10,12 +10,14 @@
 
 char *cap_string(char *s)
 {
-	int x;
+	int x = 0;
 	int y = 0;
 	char sp[13] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '\"', '(',
 		       ')', '{', '}'};
 	char *ps = sp;
 
+	if (s[x]  <= 121 && s[x] >= 97)
+		s[x] =  s[x] - 32;
 	for (x = 0; s[x] != '\0'; x++)
 	{
 		while (y < 13)
