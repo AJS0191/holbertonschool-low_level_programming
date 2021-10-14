@@ -18,7 +18,7 @@ char *leet(char *s)
 	char *pu = checku;
 	char *p1337 = le37;
 
-   	for (x = 0; s[x] != '\0'; x++)
+	for (x = 0; s[x] != '\0'; x++)
 	{
 		while (y < 6)
 		{
