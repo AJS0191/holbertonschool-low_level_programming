@@ -33,5 +33,4 @@ void print_diagsums(int *a, int size)
 		x -= w;
 	}
 	printf("%d\n", ld);
-	_putchar('\n');
 }
