@@ -24,7 +24,7 @@ void print_diagsums(int *a, int size)
 		rd += a[x];
 		x += z;
 	}
-	printf("%d\n", rd);
+	printf("%d, ", rd);
 
 	x = t - w;
 	while (x >= w)
