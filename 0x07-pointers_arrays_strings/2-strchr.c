@@ -18,6 +18,13 @@ char *_strchr(char *s, char c)
 	int b = _strlen(s);
 	char *d;
 
+	if (c == '\0')
+	{
+		d = '\0';
+		find = &d;
+		return (*find);
+	}
+
 	while (a < b)
 	{
 		if (s[a] == c)
