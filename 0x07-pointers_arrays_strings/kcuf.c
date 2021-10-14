@@ -7,13 +7,12 @@ void kcuf(int c)
 	int h = g / 10;
 	int s = h % 10;
 	int t = g % 10;
-	int u = c % 100;
 	int l = c % 10;
 
 	if (c < 0)
 		c = -c;
-	putchar(f + '0');
-	putchar(s + '0');
-	putchar(t + '0');
-	putchar(l + '0');
+	_putchar(f + '0');
+	_putchar(s + '0');
+	_putchar(t + '0');
+	_putchar(l + '0');
 }
