@@ -1,6 +1,8 @@
 #include "main.h"
 void tripled(int c)
 {
+	if (c < 0)
+		c = -c;
 	int f = c / 100;
 	int g = c / 10;
 	int m = g % 10;
