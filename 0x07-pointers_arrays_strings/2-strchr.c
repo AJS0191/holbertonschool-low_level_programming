@@ -20,7 +20,7 @@ char *_strchr(char *s, char c)
 
 	if (c == '\0')
 	{
-		d = '\0';
+		d = &s[b];
 		find = &d;
 		return (*find);
 	}
