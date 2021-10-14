@@ -1,7 +1,5 @@
 #include "main.h"
-#include "doubled.c"
-#include "tripled.c"
-#include "kcuf.c"
+#include <stdio.h>
 /**
  * print_diagsums - prints sum of both diagonals
  *
@@ -26,17 +24,7 @@ void print_diagsums(int *a, int size)
 		rd += a[x];
 		x += z;
 	}
-	if (rd < 0)
-		_putchar('-');
-	if (rd > 999)
-		kcuf(rd);
-	else if (rd > 99 || rd < -99)
-		tripled(rd);
-	else if (rd > 9)
-		doubled(rd);
-	else if (ld < 10)
-		_putchar(rd);
-	_putchar('\n');
+	printf("%d\n", rd)
 
 	x = t - w;
 	while (x >= w)
@@ -44,15 +32,6 @@ void print_diagsums(int *a, int size)
 		ld += a[x];
 		x -= w;
 	}
-	if (ld < 0)
-		_putchar('-');
-	if (ld > 999 || ld < -999)
-		kcuf(ld);
-	else if (ld > 99 || ld < -99)
-		tripled(ld);
-	else if (ld > 9 || ld < -9)
-		doubled(ld);
-	else if (ld < 10 || ld < 0)
-		_putchar(ld);
+	printf("%d\n", ld)
 	_putchar('\n');
 }
