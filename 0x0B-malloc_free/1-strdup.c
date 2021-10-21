@@ -2,6 +2,25 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
+ * _strlen - duplicates a string
+ *
+ * @s: the string to be duplicated
+ *
+ * Return: returns a duplicate of the string or null
+ **/
+int _strlen(char *s)
+{
+	int c = 0;
+
+	while (s[c] != '\0')
+	{
+		c++;
+	}
+	c++;
+	return (c);
+}
+
+/**
  * _strdup - duplicates a string
  *
  * @str: the string to be duplicated
@@ -12,7 +31,8 @@
 char *_strdup(char *str)
 {
 	int i;
-	char *str2 = malloc(sizeof(str) + 5);
+	int s = _strlen(str);
+	char *str2 = malloc(sizeof(char) * s);
 
 	if (str2)
 	{
