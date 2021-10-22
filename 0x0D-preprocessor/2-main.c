@@ -11,6 +11,6 @@ int main(void)
 {
 
 	printf(__FILE__);
-	printf('\n');
+	putchar('\n');
 	return (0);
 }
