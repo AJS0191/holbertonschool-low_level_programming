@@ -4,13 +4,13 @@
 /**
  * main - prints the name of the file
  *
- * @INPUT:
  *
  * Return: 0
  **/
 int main(void)
 {
 
-	printf("__FILE__\n");
+	printf(__FILE__);
+	printf('\n');
 	return (0);
 }
