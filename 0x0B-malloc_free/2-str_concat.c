@@ -21,15 +21,15 @@ char *str_concat(char *s1, char *s2)
 	if (new)
 	{
 		if (s1 == NULL)
-			new[0] = '\0';
-
+			new[0] = "";
+		if (s2 == NULL)
+			new[c] = "";
 		for (i = 0; s1[i] != '\0'; i++)
 		{
 			new[i] = s1[i];
 		}
+
 		c = i;
-		if (s2 == NULL)
-			new[c] = '\0';
 		for (i = 0; s2[i] != '\0'; i++)
 		{
 			new[c] = s2[i];
