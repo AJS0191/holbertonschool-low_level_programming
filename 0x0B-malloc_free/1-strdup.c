@@ -38,8 +38,8 @@ char *_strdup(char *str)
 	{
 		if (str == NULL)
 		{
-			str2 = NULL;
-			return (str2);
+			free(str2);
+			return (NULL);
 		}
 		for (i = 0; str[i] != '\0'; i++)
 		{
