@@ -1,4 +1,4 @@
-#include "main.h"
+#include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
@@ -17,10 +17,10 @@ int main(int argc, char *argv[])
 	if (argv[2] == NULL || argc != 3)
 		printf("Error\n");
 
-	if (argv[2] == "/" && atoi(argv[3]) == 0)
+	if (argv[2] == '/' && atoi(argv[3]) == 0)
 		printf("Error\n");
 
-	if (argv[2] == "%" && atoi(argv[3]) == 0)
+	if (argv[2] == '%' && atoi(argv[3]) == 0)
 		printf("Error\n");
 
 	val = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
