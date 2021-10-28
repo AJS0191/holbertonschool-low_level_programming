@@ -1,7 +1,7 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "3-get_op_func.c"
+#include <string.h>
 /**
  * main - takes 3 arguments and calulates
  *
@@ -15,15 +15,21 @@ int main(int argc, char *argv[])
 {
 	int val;
 
-	if (argv[2] == NULL || argc != 4)
+	if (argc != 4)
+	{
 		printf("Error\n");
-
-	if ((*argv[2] == '/') && (atoi(argv[3]) == 0))
+		exit(98);
+	}
+	if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == '0')
+	{
 		printf("Error\n");
-
-	if ((*argv[2] == '%') && (atoi(argv[3]) == 0))
+		exit(100);
+	}
+	if (*argv[2] != '/' && *argv[2] != '*' && *argv[2] != '+' && *argv[2] != '-' && *argv[2] != '%')
+	{
 		printf("Error\n");
-
+		exit(99);
+	}
 	val = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
 	printf("%d\n", val);
 	return (0);
