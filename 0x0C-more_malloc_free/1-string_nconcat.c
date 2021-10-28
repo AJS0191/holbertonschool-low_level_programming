@@ -25,8 +25,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 
 	l = strlen(s1) + n;
+	if((strlen(s1) + strlen(s2)) < n)
+	{
+		cat = malloc(sizeof(char) * ((strlen(s1) + strlen(s2))));
+	}
+	else
+	{
 	cat = malloc(sizeof(char) * l);
-
+	}
+	
 	if (cat == NULL)
 		return (NULL);
 	for (c = 0; s1[c] != '\0'; c++)
