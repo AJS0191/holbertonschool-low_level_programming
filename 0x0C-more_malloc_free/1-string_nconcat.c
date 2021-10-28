@@ -29,10 +29,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (cat == NULL)
 		return (NULL);
-
-	for (c = 0; s1[c] != '\0'; c++)
+	if (s1 != "")
 	{
-		cat[c] = s1[c];
+		for (c = 0; s1[c] != '\0'; c++)
+		{
+			cat[c] = s1[c];
+		}
 	}
 	if (n < strlen(s2))
 	{
