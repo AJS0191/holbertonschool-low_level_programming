@@ -9,7 +9,7 @@
  * Description: holds three sets of info for each dog created
  */
 
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
