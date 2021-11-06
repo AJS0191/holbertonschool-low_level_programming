@@ -9,7 +9,7 @@
  **/
 #include <stdio.h>
 #include <stdarg.h>
-#include "main.h"
+#include "variadic_functions.h"
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -25,7 +25,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%d", x);
 		}
 		x = va_arg(ap, int);
-		printf("%d", x);
+		printf("%d\n", x);
 		va_end(ap);
 	}
 	else
@@ -38,7 +38,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%s", separator);
 		}
 		x = va_arg(ap, int);
-		printf("%d", x);
+		printf("%d\n", x);
 		va_end(ap);
 	}
 }
