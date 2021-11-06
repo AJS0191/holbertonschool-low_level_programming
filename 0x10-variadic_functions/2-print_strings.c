@@ -25,7 +25,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		for (counter = 0; counter < n - 1; counter++)
 		{
 			x = va_arg(ap, char *);
-			printf("%s", x);
+			if (x == NULL)
+			{
+				printf("(nil)");
+			}
+			else
+				printf("%s", x);
 		}
 		x = va_arg(ap, char *);
 		printf("%s\n", x);
