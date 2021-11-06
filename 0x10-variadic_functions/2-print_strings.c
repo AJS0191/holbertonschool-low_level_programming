@@ -44,7 +44,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("(nil)");
 			else
 				printf("%s", x);
-			printf("%s", x);
 			printf("%s", separator);
 		}
 		x = va_arg(ap, char *);
