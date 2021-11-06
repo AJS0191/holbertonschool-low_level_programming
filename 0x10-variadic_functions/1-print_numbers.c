@@ -1,4 +1,6 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdarg.h>
+#include "variadic_functions.h"
 /**
  * print_numbers - takes a list of ints and prints them to stdout
  *
@@ -7,10 +9,6 @@
  *
  * Return: VOID
  **/
-#include <stdio.h>
-#include <stdarg.h>
-#include "variadic_functions.h"
-
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list ap;
