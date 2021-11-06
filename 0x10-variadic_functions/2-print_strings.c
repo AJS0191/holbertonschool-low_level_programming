@@ -19,34 +19,20 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (n == 0)
 		exit(0);
-	if (separator == NULL)
+	va_start(ap, n);
+	for (counter = 0; counter < n - 1; counter++)
 	{
-		va_start(ap, n);
-		for (counter = 0; counter < n - 1; counter++)
-		{
-			x = va_arg(ap, char *);
-			if (x == NULL)
-				printf("(nil)");
-			else
-				printf("%s", x);
-		}
 		x = va_arg(ap, char *);
-		printf("%s\n", x);
-		va_end(ap);
-	}
-	else
-	{
-		va_start(ap, n);
-		for (counter = 0; counter < n - 1; counter++)
-		{
-			x = va_arg(ap, char *);
-			if (x == NULL)
-				printf("(nil)");
-			else
-				printf("%s", x);
+		if (x == NULL)
+			printf("(nil)");
+		else
+			printf("%s", x);
+		if (separator != NULL)
 			printf("%s", separator);
-		}
-		x = va_arg(ap, char *);
-		printf("%s\n", x);
-		va_end(ap);
-}}
+	}
+	x = va_arg(ap, char *);
+	if (x == NULL)
+		printf("(nil)");
+	printf("%s\n", x);
+	va_end(ap);
+}
