@@ -8,7 +8,7 @@
  * @h: linked list to be printed
  *
  *
- * Return: returns the number of nodes in the list which is of type size_t (unsigned int)
+ * Return: returns the number of nodes in the list which is of type size_t
  **/
 
 
@@ -17,11 +17,13 @@ size_t print_list(const list_t *h)
 	/* allowed to use printf */
 	const list_t *temp = h;
 	size_t nodes = 0;
-	/*prints the first nodes string
-	printf("%s", h->str);*/
-	while(temp != NULL)
+	/**
+	 * prints the first nodes string
+	 * printf("%s", h->str);
+	 **/
+	while (temp != NULL)
 	{
-		if(temp->str == NULL)
+		if (temp->str == NULL)
 		{
 			printf("[0] %s\n", "(nil)");
 		}
