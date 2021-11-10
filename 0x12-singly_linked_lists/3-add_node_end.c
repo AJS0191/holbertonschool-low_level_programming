@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * add_node - adds a node to a linked list
+ * add_node_end - adds a node to the end of a linked list
  *
  * @head: linked list being added too
  * @str: string being inserted in node
@@ -19,14 +19,25 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	newn = malloc(sizeof(list_t));
 	if (!newn)
+	{
+		free(newn);
 		return (NULL);
-
+	}
 	temp = malloc(sizeof(list_t));
 	if (!temp)
+	{
+		free(temp);
+		free(newn);
 		return (NULL);
+	}
 
 	newn->next = NULL;
 	newn->str = strdup(str);
+	{
+		free(newn);
+		free(temp);
+		return (NULL);
+	}
 	newn->len = strlen(str);
 	if (*head == NULL)
 	{
