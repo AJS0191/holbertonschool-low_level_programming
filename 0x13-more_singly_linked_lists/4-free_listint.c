@@ -3,12 +3,12 @@
 #include <stddef.h>
 #include <string.h>
 /**
- * print_list - prints elements of a list_t linked list
+ * free_listint - frees a linked list
  *
- * @h: linked list to be printed
+ * @head: linked list being freed
  *
  *
- * Return: returns the number of nodes in the list which is of type size_t
+ * Return: void
  **/
 void free_listint(listint_t *head)
 {
