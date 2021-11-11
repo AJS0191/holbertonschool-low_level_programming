@@ -31,7 +31,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	newn->next = NULL;
 	newn->n = input;
 	if (*head == NULL)
-		*head =newn;
+		*head = newn;
 	else
 	{
 		indexer = *head;
