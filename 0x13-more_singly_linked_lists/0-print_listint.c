@@ -17,6 +17,7 @@ size_t print_listint(const listint_t *h)
 	const listint_t *printer;
 	size_t node_count = 0;
 
+
 	printer = h;
 	while (printer->next != NULL)
 	{
@@ -27,6 +28,5 @@ size_t print_listint(const listint_t *h)
 	/*Have to account for last node*/
 	printf("%d\n", printer->n);
 	node_count++;
-	free(printer);
 	return (node_count);
 }
