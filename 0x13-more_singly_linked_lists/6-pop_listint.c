@@ -3,12 +3,12 @@
 #include <stddef.h>
 #include <string.h>
 /**
- * free_listint2 - frees a linked list
+ * pop_listint - pops  a linked list
  *
- * @head: linked list being freed
+ * @head: linked list being popped
  *
  *
- * Return: void
+ * Return: value in head being popped
  **/
 int pop_listint(listint_t **head)
 {
