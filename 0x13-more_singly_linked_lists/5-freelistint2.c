@@ -10,18 +10,19 @@
  *
  * Return: void
  **/
+
 void free_listint2(listint_t **head)
 {
-	listint_t *freed;
+	listint_t *freenode;
 
 	if (head == NULL)
 		return;
 	while (*head != NULL)
 	{
-		freed = (*head)->next;
+		freenode = (*head)->next;
 		free(*head);
-		*head = freed;
+		*head = freenode;
 	}
-	free(freed);
+	free(freenode);
 	*head = NULL;
 }
