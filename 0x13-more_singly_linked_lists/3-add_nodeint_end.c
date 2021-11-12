@@ -22,12 +22,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		free(newn);
 		exit(0);
 	}
-	indexer = malloc(sizeof(listint_t));
-	if (!indexer)
-	{
-		free(indexer);
-		exit(0);
-	}
 	newn->next = NULL;
 	newn->n = input;
 	if (*head == NULL)
