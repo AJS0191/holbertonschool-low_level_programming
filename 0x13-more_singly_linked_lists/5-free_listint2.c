@@ -1,7 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
-#include <stddef.h>
-#include <string.h>
+#include <stdlib.h>
 /**
  * free_listint2 - frees a linked list
  *
@@ -10,15 +9,19 @@
  *
  * Return: void
  **/
+
 void free_listint2(listint_t **head)
 {
-	listint_t *temp;
+	listint_t *freenode;
 
-	while (head->next != NULL)
+	if (head == NULL)
+		return;
+	while (*head != NULL)
 	{
-		temp = head->next;
-		free(head);
-		head = temp;
+		freenode = (*head)->next;
+		free(*head);
+		*head = freenode;
 	}
-	head = NULL;
+	free(freenode);
+	*head = NULL;
 }
