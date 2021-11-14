@@ -15,5 +15,5 @@ int set_bit(unsigned long int *n, unsigned int index)
 	x = (1 << 6) | x;
 	if (sizeof(n) * 8 < index)
 		return (-1);
-	return (x);
+	return (1);
 }
