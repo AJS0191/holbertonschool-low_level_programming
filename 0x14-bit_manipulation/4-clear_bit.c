@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- *set_bit - sets bit to 1
+ * clear_bit - sets bit to 0
  * @index: bit being worked
  * @n: number being passed
  * Return: new number or err
