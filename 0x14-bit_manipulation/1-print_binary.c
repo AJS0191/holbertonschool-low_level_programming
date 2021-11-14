@@ -11,7 +11,7 @@
 
 void print_binary(unsigned long int n)
 {
-	int swap = n;
+	unsigned long int swap = n;
 /*using bitwise to get to one digit and recursion to move forward*/
 	if (swap > 1)
 		print_binary(swap >> 1);
