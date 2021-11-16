@@ -38,6 +38,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		exor &= (exor - 1);
 		/* which basically is removing one column from the right until*/
 	}
-      /*exor equals zero, the number of times this happens is the bitsswitched*/
+      /*exor equals zero,the number of times this happens is the bitsswitched*/
 	return (i);
 }
