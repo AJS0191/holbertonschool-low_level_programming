@@ -39,8 +39,9 @@ unsigned int binary_to_uint(const char *b)
 	for (len = strlen(b); len > 0; len--)
 	{
 		holder = swap[counter];
-		if (b == NULL || holder > 49 || holder < 48)
+		if (b == NULL)
 			return (0);
+		(holder != 49 && holder != 48)
 		if (holder - 48 == 1)
 		{
 			sum += power(2, len - 1);
