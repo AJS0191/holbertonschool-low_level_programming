@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 /**
  * main - copies a file
  * @argc: number of args
@@ -47,7 +48,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	fd = open(argv[1], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fd = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	if (fd == -1)
 	{
@@ -55,7 +56,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	err = write(fd, buf, 1024);
+	err = write(fd, buf, strlen(buf));
 
 	if (err == -1)
 	{
