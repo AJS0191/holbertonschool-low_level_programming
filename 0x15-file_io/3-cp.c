@@ -12,7 +12,7 @@
  * Return: void
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	char buf[1024];
 	int fd, err;
