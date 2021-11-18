@@ -16,7 +16,7 @@
 int main(int argc, char *argv[])
 {
 	char buf[1024];
-	int fd, err;
+	int oF, nF, err;
 
 	if (argc != 3)
 	{
@@ -24,51 +24,45 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	fd = open(argv[1], O_RDONLY);
+	oF = open(argv[1], O_RDONLY);
 
-	if (fd == -1)
+	if (oF == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
-	err = read(fd, buf, 1024);
+	nF = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-	if (err == -1)
+	if (nF == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
 	}
 
-	err = close(fd);
+	/* err will also keep count of chars printed */
+	while ((err = read(oF, buf, 1024)) != 0)
+	{
+		if (err == -1)
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
+				exit(98);
+		if (write(nF, buf, err) != err)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
+				exit(99);
+	}
+
+	err = close(oF);
 
 	if (err == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", oF);
 		exit(100);
 	}
-
-	fd = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
-	if (fd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
-
-	err = write(fd, buf, strlen(buf));
+	err = close(nF);
 
 	if (err == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
-
-	err = close(fd);
-
-	if (err == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", nF);
 		exit(100);
 	}
 	return (0);
