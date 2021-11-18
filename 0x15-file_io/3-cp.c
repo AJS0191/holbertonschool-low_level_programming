@@ -47,7 +47,7 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 
-	fd = open(argv[1], O_TRUNC | O_CREAT | O_WRONLY, 0661);
+	fd = open(argv[1], O_CREAT | O_WRONLY | O_TRUNC 0664);
 
 	if (fd == -1)
 	{
@@ -70,5 +70,5 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
-	return (1);
+	return (0);
 }
