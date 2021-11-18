@@ -47,7 +47,7 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 
-	fd = open(argv[1], O_CREAT | O_WRONLY | O_TRUNC 0664);
+	fd = open(argv[1], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	if (fd == -1)
 	{
