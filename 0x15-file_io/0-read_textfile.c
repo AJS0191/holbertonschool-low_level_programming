@@ -16,6 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t i = 0;
 	int fd;
 	char *buf;
+	int len;
 
 	/* check if filename is null*/
 	if (!filename)
@@ -32,7 +33,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	/* sets "letters" cha of buffer to first "letters" cha of filename*/
-	read(fd, buf, letters);
+	len = read(fd, buf, letters);
 
 	if (!buf)
 		return (0);
@@ -41,6 +42,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	/*use write to print from buffer*/
 
-	i = write(STDOUT_FILENO, buffer, length);
+	i = write(STDOUT_FILENO, buf, len);
 	return (i);
 }
