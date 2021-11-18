@@ -39,12 +39,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	/*done with fd so close it*/
 	close(fd);
 
-	/*while loop to print and get #of chars printed*/
+	/*use write to print from buffer*/
 
-	while (buf[i] != '\0')
-	{
-		_putchar(buf[i]);
-			 i++;
-	}
+	i = write(STDOUT_FILENO, buffer, length);
 	return (i);
 }
