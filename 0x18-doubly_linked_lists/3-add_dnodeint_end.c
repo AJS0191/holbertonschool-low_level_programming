@@ -1,5 +1,10 @@
 #include "lists.h"
-
+/**
+ * get_last_node - grabs the last node in an dlistint_t list
+ * @head: start of the list
+ *
+ * Return: returns the last node in the list
+ **/
 
 dlistint_t *get_last_node(dlistint_t *head)
 {
