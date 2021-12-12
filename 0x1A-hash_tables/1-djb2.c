@@ -1,11 +1,11 @@
 #include "hash_tables.h"
 
 /**
- * hash_djb2- implementation of the djb2 algorithm
+ * hash_djb2 - implementation of the djb2 algorithm
  *
- * @str - string being transposed to number
+ * @str: string being transposed to number
  *
- * Return = returns a number associated to the string
+ * Return: returns a number associated to the string
  **/
 
 unsigned long int hash_djb2(const unsigned char *str)
