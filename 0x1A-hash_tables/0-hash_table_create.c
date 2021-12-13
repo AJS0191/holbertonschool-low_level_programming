@@ -1,30 +1,37 @@
 #include "hash_tables.h"
+/**
+ * hash_table_create - makes a pointer to a hash table
+ *
+ * @size: unsigned long int for how large the new table will be
+ *
+ * Return: returns the created hash table pointer
+ **/
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *new_hash_table_holder;
-	hash_node_t **new_hash_table;
-	unsigned long i = 0;
+	hash_table_t *table_struct = NULL;
+	hash_node_t **new_table = NULL;
+	unsigned long int i;
 
-	/* hash_table_t is really a struct that holds hash table array */
-	new_hash_table_holder = malloc(sizeof(hash_table_t));
-	if (new_hash_table_holder == NULL)
+
+	/* allocating memory for the struct that holds the new table */
+	table_struct = malloc(sizeof(hash_table_t));
+
+	if (!table_struct)
 		return (NULL);
-	new_hash_table_holder->size = size;
+	table_struct->size = size;
+	/*allocating memory for the double pointer that serves as the table*/
+	new_table = malloc(sizeof(hash_node_t *) * size);
 
-	/* make the actual hash table array inside hash_table_t */
-	new_hash_table = malloc(sizeof(hash_node_t *) * size);
-	if (new_hash_table == NULL)
-	{
-		free(new_hash_table_holder);
+	if (!new_table)
 		return (NULL);
-	}
-	while (i < size)
-	{
-		new_hash_table[i] = NULL;
-		i++;
-	}
-	new_hash_table_holder->array = new_hash_table;
 
-	return (new_hash_table_holder);
+	for (i = 0; i <= size; i++)
+	{
+		new_table[i] = NULL;
+	}
+
+	table_struct->array = new_table;
+
+	return (table_struct);
 }
