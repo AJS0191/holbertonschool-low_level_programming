@@ -18,38 +18,39 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t **table;
 	hash_node_t *new_node;
 
-	if (ht && key)
+	if (!ht || !key)
 	{
-		size = ht->size;
-		table = ht->array;
-		strcpy((char *)key_dup, key);
-		key_ex = key_index(key_dup, size);
-		new_node = malloc(sizeof(hash_node_t));
-		new_node->value = strdup(value);
-		new_node->key = strdup(key);
-		if (table[key_ex] == NULL)
+		return (NULL);
+	}
+	size = ht->size;
+	table = ht->array;
+	strcpy((char *)key_dup, key);
+	key_ex = key_index(key_dup, size);
+	new_node = malloc(sizeof(hash_node_t));
+	new_node->value = strdup(value);
+	new_node->key = strdup(key);
+	if (table[key_ex] == NULL)
+	{
+		new_node->next = NULL;
+		table[key_ex] = new_node;
+		ht->array = table;
+		return (1);
+	}
+	else
+	{
+		if (strcmp(key, table[key_ex]->key) > -1)
 		{
-			new_node->next = NULL;
-			table[key_ex] = new_node;
-			ht->array = table;
+			free(table[key_ex]->value);
+			table[key_ex]->value = new_node->value;
+			free(new_node->value);
+			free(new_node->key);
+			free(new_node);
 			return (1);
 		}
-		else
-		{
-			if (strcmp(key, table[key_ex]->key) > -1)
-			{
-				free(table[key_ex]->value);
-				table[key_ex]->value = new_node->value;
-				free(new_node->value);
-				free(new_node->key);
-				free(new_node);
-				return (1);
-			}
-			new_node->next = table[key_ex];
-			table[key_ex] = new_node;
-			ht->array = table;
-			return (1);
-		}
+		new_node->next = table[key_ex];
+		table[key_ex] = new_node;
+		ht->array = table;
+		return (1);
 	}
 	return (0);
 }
