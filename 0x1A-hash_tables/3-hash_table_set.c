@@ -22,6 +22,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		return (0);
 	}
+	if (strlen(key) < 1)
+		return (0);
+	if (!value)
+		return (0);
 	size = ht->size;
 	table = ht->array;
 	strcpy((char *)key_dup, key);
@@ -45,6 +49,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			free(new_node->value);
 			free(new_node->key);
 			free(new_node);
+			ht->array = table;
 			return (1);
 		}
 		new_node->next = table[key_ex];
