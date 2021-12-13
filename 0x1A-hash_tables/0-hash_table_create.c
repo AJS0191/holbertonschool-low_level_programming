@@ -24,9 +24,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 	new_table = malloc(sizeof(hash_node_t *) * size);
 
 	if (!new_table)
+	{
+		free(table_struct);
 		return (NULL);
-
-	for (i = 0; i <= size; i++)
+	}
+	for (i = 0; i < size; i++)
 	{
 		new_table[i] = NULL;
 	}
