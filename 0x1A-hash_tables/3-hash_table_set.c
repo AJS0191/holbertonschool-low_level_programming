@@ -20,7 +20,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!ht || !key)
 	{
-		return (NULL);
+		return (0);
 	}
 	size = ht->size;
 	table = ht->array;
