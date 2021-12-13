@@ -15,24 +15,22 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int size = ht->size;
 	hash_node_t **table = ht->array;
 	unsigned long int index;
-	unsigned char *key_dup = malloc(sizeof(unsigned char *));
 	hash_node_t *temp;
 
 	if (ht && key)
 	{
-		strcpy((char *)key_dup, key);
-		index = key_index(key_dup, size);
-		free(key_dup);
+
+		index = key_index((unsigned char *)key, size);
 
 		temp = table[index];
 		if (temp == NULL)
 			return (NULL);
-		if (strcmp(temp->key, key) != -1)
+		if (strcmp(temp->key, key) > -1)
 			return (temp->value);
 
 		while (temp->next != NULL)
 		{
-			if (strcmp(temp->key, key) != -1)
+			if (strcmp(temp->key, key) > -1)
 				return (temp->value);
 			temp = temp->next;
 		}
