@@ -18,7 +18,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned char *key_dup = malloc(sizeof(unsigned char *));
 	hash_node_t *temp;
 
-	if (ht)
+	if (ht && key)
 	{
 		strcpy((char *)key_dup, key);
 		index = key_index(key_dup, size);
