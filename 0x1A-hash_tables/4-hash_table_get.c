@@ -22,13 +22,15 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	{
 		strcpy((char *)key_dup, key);
 		index = key_index(key_dup, size);
+		free(key_dup);
+
 		temp = table[index];
 		if (temp == NULL)
 			return (NULL);
 		if (strcmp(temp->key, key) != -1)
 			return (temp->value);
 
-		while(temp->next != NULL)
+		while (temp->next != NULL)
 		{
 			if (strcmp(temp->key, key) != -1)
 				return (temp->value);
