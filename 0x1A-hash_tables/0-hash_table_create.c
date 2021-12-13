@@ -15,7 +15,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 
 	/* allocating memory for the struct that holds the new table */
-	table_struct = malloc(sizeof(hash_table_t *));
+	table_struct = malloc(sizeof(hash_table_t));
 
 	if (!table_struct)
 		return (NULL);
