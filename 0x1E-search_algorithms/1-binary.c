@@ -30,10 +30,10 @@ int rec_binary(int *array, size_t first, size_t last, int value)
 	if (array[mid] == value)
 		return (mid);
 
-	else if (array[mid] > value)
+	else if (array[mid] < value)
 		ret = (rec_binary(array, first, mid + 1, value));
 
-	else if (array[mid] < value)
+	else if (array[mid] > value)
 		ret = (rec_binary(array, mid - 1, last, value));
 
 	return (ret);
@@ -54,4 +54,3 @@ int binary_search(int *array, size_t size, int value)
 
 	return (rec_binary(array, 0, size - 1, value));
 }
- 
