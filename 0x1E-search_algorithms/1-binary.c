@@ -31,10 +31,10 @@ int rec_binary(int *array, size_t first, size_t last, int value)
 		return (mid);
 
 	else if (array[mid] < value)
-		ret = (rec_binary(array, first, mid + 1, value));
+		ret = (rec_binary(array, mid + 1, last, value));
 
 	else if (array[mid] > value)
-		ret = (rec_binary(array, mid - 1, last, value));
+		ret = (rec_binary(array, first, mid - 1, value));
 
 	return (ret);
 }
