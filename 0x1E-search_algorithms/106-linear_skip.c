@@ -3,7 +3,7 @@
 /**
  * linear_skip - finds a value in sorted skiplist
  * @list: head of skiplist being searched
- * @value: the value being searched for 
+ * @value: the value being searched for
  * Return: pointer to first instance of value or NULL
  */
 skiplist_t *linear_skip(skiplist_t *list, int value)
@@ -21,7 +21,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 			node = tmp->express;
 			printf("Value checked at index [%ld] = [%d]\n", node->index, node->n);
 		}
-        
+
 		else
 		{
 			node = tmp;
