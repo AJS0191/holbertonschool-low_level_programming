@@ -1,1 +1,7 @@
 0x1E-search_algorithms/1-main.c
+0x1E-search_algorithms/skiplist/create_skiplist.c
+0x1E-search_algorithms/skiplist/free_skiplist.c
+0x1E-search_algorithms/skiplist/print_skiplist.c
+0x1E-search_algorithms/106-main.c
+.gitignore
+0x1E-search_algorithms/skiplist/search_algos.h
